@@ -15,11 +15,13 @@ public class MBQuickType: UIView {
     fileprivate var controller = UIViewController()
     private var buttonsBGColor: UIColor = UIColor(red:0.00, green:0.67, blue:1.00, alpha:1.0)
     fileprivate var nextX = 10
-    
+
     // Public
     public var buttons: [UIButton] = []
     
     public var barBGColor: UIColor = UIColor.groupTableViewBackground
+    
+    public var showScrollIndicator = false
     
     public var buttonBGColor: UIColor? {
         
@@ -58,7 +60,7 @@ public class MBQuickType: UIView {
     
     public func addButton(withTitle: String, target: Selector) {
         
-        let button = UIButton(frame: CGRect(x: nextX, y: 0, width: 120, height: 30))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: 30))
         
         button.backgroundColor = self.buttonsBGColor
         
@@ -67,8 +69,6 @@ public class MBQuickType: UIView {
         button.sizeToFit()
         
         button.bounds.size.width += 10
-        
-        self.nextX += Int (button.bounds.width + 10)
         
         button.layer.cornerRadius = 5
         
@@ -80,6 +80,7 @@ public class MBQuickType: UIView {
         
     }
     
+    
     public func renderedView() -> UIView {
         
         
@@ -87,19 +88,16 @@ public class MBQuickType: UIView {
 
         accessoryView.backgroundColor = self.barBGColor
         accessoryView.showsVerticalScrollIndicator = false
-        accessoryView.showsHorizontalScrollIndicator = false
-        
-        accessoryView.layer.shadowColor = UIColor.darkGray.cgColor
-        accessoryView.layer.shadowOpacity = 0.5
-        
-        accessoryView.layer.shadowRadius = 5
-        
-        accessoryView.contentSize.width = 10
+        accessoryView.showsHorizontalScrollIndicator = self.showScrollIndicator
         
        
         DispatchQueue.main.async {
             
             for i in self.buttons {
+                
+                i.frame = CGRect(x: self.nextX, y: 0, width: Int(i.bounds.size.width), height: 30)
+                
+                self.nextX += Int (i.bounds.width + 10)
                 
                 i.center.y = accessoryView.center.y
                 

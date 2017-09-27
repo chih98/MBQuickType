@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD8074D21F7C351C004A794F /* MBQuickType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBC045D1F7B217500EE258C /* MBQuickType.framework */; };
+		AD8074D31F7C351C004A794F /* MBQuickType.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADBC045D1F7B217500EE258C /* MBQuickType.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ADBC04621F7B217500EE258C /* MBQuickType.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBC04601F7B217500EE258C /* MBQuickType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADBC04691F7B218500EE258C /* MBQuickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC04681F7B218500EE258C /* MBQuickType.swift */; };
 		ADBC04921F7B3F3600EE258C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC04911F7B3F3600EE258C /* AppDelegate.swift */; };
@@ -18,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AD8074D41F7C351C004A794F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADBC04541F7B217500EE258C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADBC045C1F7B217500EE258C;
+			remoteInfo = MBQuickType;
+		};
 		ADBC04A31F7B3F3700EE258C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBC04541F7B217500EE258C /* Project object */;
@@ -26,6 +35,20 @@
 			remoteInfo = Example;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD8074D61F7C351C004A794F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AD8074D31F7C351C004A794F /* MBQuickType.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		ADBC045D1F7B217500EE258C /* MBQuickType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBQuickType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +66,6 @@
 		ADBC04A61F7B3F3700EE258C /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		ADBC04A81F7B3F3700EE258C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC551221F7B740800BE593B /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		ADC551231F7B741200BE593B /* simshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8074D21F7C351C004A794F /* MBQuickType.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				ADC551221F7B740800BE593B /* readme.md */,
-				ADC551231F7B741200BE593B /* simshot.png */,
 				ADBC045F1F7B217500EE258C /* MBQuickType */,
 				ADBC04901F7B3F3600EE258C /* Example */,
 				ADBC04A51F7B3F3700EE258C /* ExampleUITests */,
@@ -164,10 +186,12 @@
 				ADBC048B1F7B3F3600EE258C /* Sources */,
 				ADBC048C1F7B3F3600EE258C /* Frameworks */,
 				ADBC048D1F7B3F3600EE258C /* Resources */,
+				AD8074D61F7C351C004A794F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AD8074D51F7C351C004A794F /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -294,6 +318,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AD8074D51F7C351C004A794F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADBC045C1F7B217500EE258C /* MBQuickType */;
+			targetProxy = AD8074D41F7C351C004A794F /* PBXContainerItemProxy */;
+		};
 		ADBC04A41F7B3F3700EE258C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ADBC048E1F7B3F3600EE258C /* Example */;
@@ -486,6 +515,7 @@
 		ADBC04AA1F7B3F3700EE258C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G825959SED;
@@ -501,6 +531,7 @@
 		ADBC04AB1F7B3F3700EE258C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G825959SED;

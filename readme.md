@@ -1,7 +1,7 @@
-# MB Quick Type
+# MB QuickType
 > This is under the MIT license
 
-<img src="./preview.gif" width="225" height="487">
+<img src="./preview.gif" width="246" height="441">
 
 ## Synopsis
 
@@ -15,7 +15,7 @@
 
 ## Variables
 
-* `buttons: [UIButton]` is the array where all the `UIButton` are stored. This is private since you can use any button you want
+* `buttons: [UIButton]` is the array where all the `UIButton` are stored. `buttons: [UIButton]` is public. This is done to give you full control of the array.
 
 > Button height should be 30, width should be adaptable.
 
@@ -58,25 +58,25 @@ import MBQuickType
 
 public class MyViewController {
 
-// TextField/TextView where you want the MBQuickType to be the inputAccessoryView.
-@IBOutlet weak var myTextField: UITextField!
+    // TextField/TextView where you want the MBQuickType to be the inputAccessoryView.
+    @IBOutlet weak var myTextField: UITextField!
 
-override func viewDidLoad() {
-super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-// Initializing MBQuickType
-let quickType = MBQuickType(withController: self, inputView: self.textField)
+        // Initializing MBQuickType
+        let quickType = MBQuickType(withController: self, inputView: self.textField)
 
-// Adding Buttons
-quickType.addButton(withTitle: "Option1", target: #selector(self.buttonAction(_:)))
-quickType.addButton(withTitle: "Option2", target: #selector(self.buttonAction(_:)))
-//...
-quickType.addButton(withTitle: "Option6", target: #selector(self.buttonAction(_:)))
+        // Adding Buttons
+        quickType.addButton(withTitle: "Option1", target: #selector(self.buttonAction(_:)))
+        quickType.addButton(withTitle: "Option2", target: #selector(self.buttonAction(_:)))
+        //...
+        quickType.addButton(withTitle: "Option6", target: #selector(self.buttonAction(_:)))
 
-// Setting inputAccessoryView as the returned view
-self.myTextField.inputAccessoryView = quickType.renderedView()
+        // Setting inputAccessoryView as the returned view
+        self.myTextField.inputAccessoryView = quickType.renderedView()
 
-}
+    }
 
 }
 

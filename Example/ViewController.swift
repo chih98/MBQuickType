@@ -26,8 +26,7 @@ class ViewController: UIViewController {
         quickType.addButton(withTitle: "Option6", target: #selector(self.buttonAction(_:)))
         
         textField.inputAccessoryView = quickType.renderedView()
-        
-        
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
