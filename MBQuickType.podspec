@@ -8,7 +8,7 @@ MBQuickType is designed to easily present a list of options to the user when ent
                        DESC
  
   s.homepage         = 'https://github.com/chih98/MBQuickType'
-  s.license          = { :type => 'MIT', :file => 'MIT.txt' }
+  s.license          = { :type => 'MIT', :file => 'https://github.com/chih98/MBQuickType/MIT.txt' }
   s.author           = { 'Marko Crnkovic' => 'admin@mbobpro.com' }
   s.source           = { :git => 'https://github.com/chih98/MBQuickType.git', :tag => s.version.to_s }
  
