@@ -16,8 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let
-        quickType = MBQuickType(withController: self, inputView: self.textField)
+        let quickType = MBQuickType(withController: self, inputView: self.textField)
         
         quickType.addButton(withTitle: "Option1", target: #selector(self.buttonAction(_:)))
         quickType.addButton(withTitle: "Option2", target: #selector(self.buttonAction(_:)))
