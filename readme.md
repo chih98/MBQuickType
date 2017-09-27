@@ -1,7 +1,7 @@
 # MB Quick Type
 > This is under the MIT license
 
-<img src"./simshot.png" width="225" height="487">
+<img src="./simshot.png" width="225" height="487">
 
 ## Synopsis
 
