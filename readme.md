@@ -1,7 +1,7 @@
 # MB Quick Type
 > This is under the MIT license
 
-![screenshot preview](./simshot.png)
+<img src"./simshot.png" width="225" height="487">
 
 ## Synopsis
 
@@ -29,7 +29,10 @@
 
 ## Functions
 
-* `init(withController: UIViewController, inputView: UIView)` is the default initializer.
+* ```Swift
+    init(withController: UIViewController, inputView: UIView)
+    ```
+is the default initializer.
 	* param `withController` is the controller where the button targets are.
 	* param `inputView` must be the input view where the keyboard should have MBQuickType as the accessory view.
 

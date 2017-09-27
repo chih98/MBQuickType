@@ -8,10 +8,10 @@ MBQuickType is designed to easily present a list of options to the user when ent
                        DESC
  
   s.homepage         = 'https://github.com/chih98/MBQuickType'
-  s.license          = { :type => 'MIT', :file => 'https://github.com/chih98/MBQuickType/MIT.txt' }
+  s.license          = { :type => 'MIT' }
   s.author           = { 'Marko Crnkovic' => 'admin@mbobpro.com' }
   s.source           = { :git => 'https://github.com/chih98/MBQuickType.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '10.0'
-  s.source_files = 'MBQuickType/*.{swift,h,plist}' 
+  s.source_files = 'Classes/*.{swift,h,plist}' 
 end
