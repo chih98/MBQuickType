@@ -1,10 +1,11 @@
 # MB QuickType
 > This is under the MIT license
 
-<img src="./preview.gif" width="246" height="441">
-
-## Synopsis
+[![HitCount](http://hits.dwyl.com/chih98/mbquicktype.svg)](http://hits.dwyl.com/chih98/mbquicktype)
 [![Build Status](https://travis-ci.org/chih98/MBQuickType.svg?branch=master)](https://travis-ci.org/chih98/MBQuickType)
+
+
+<img src="./preview.gif" width="246" height="441">
 
 ## Let's Get Started
 

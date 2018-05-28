@@ -1,3 +1,5 @@
 language: objective-c
 xcode_project: MBQuickType.xcodeproj # path to your xcodeproj folder
 xcode_scheme: MBQuickTypeTests
+script: - xcodebuild clean build -sdk iphonesimulator -workspace Project.xcworkspace -scheme ProjectTests CODE_SIGNING_REQUIRED=NO
+
