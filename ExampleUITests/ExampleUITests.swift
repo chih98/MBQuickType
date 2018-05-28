@@ -31,16 +31,4 @@ class ExampleUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testButtonInsertion() {
-        
-        
-        
-    }
-    
-    @objc func buttonAction(_ sender: Any) {
-        
-        print("Pressed")
-        
-    }
-    
 }
