@@ -17,12 +17,15 @@ public class MBQuickType: UIView {
     fileprivate var nextX = 10
 
     // Public
+    /// The array of buttons that will be displayed
     public var buttons: [UIButton] = []
     
+    /// The background color of the bar
     public var barBGColor: UIColor = UIColor.groupTableViewBackground
     
     public var showScrollIndicator = false
     
+    /// The background color of each button
     public var buttonBGColor: UIColor? {
         
         get {
@@ -33,9 +36,9 @@ public class MBQuickType: UIView {
         
         set {
             
-            for i in buttons {
+            for button in buttons {
                 
-                i.backgroundColor = self.buttonsBGColor
+                button.backgroundColor = self.buttonsBGColor
                 
             }
             
@@ -43,6 +46,7 @@ public class MBQuickType: UIView {
         
     }
     
+    /// Default Init
     @discardableResult public convenience init(withController: UIViewController, inputView withView: UIView) {
         self.init()
         
@@ -58,6 +62,7 @@ public class MBQuickType: UIView {
         
     }
     
+    /// Append a button to the end.
     public func addButton(withTitle: String, target: Selector) {
         
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: 30))
@@ -80,7 +85,7 @@ public class MBQuickType: UIView {
         
     }
     
-    
+    /// Returns the rendered view to set the inputAccessoryView to
     public func renderedView() -> UIView {
         
         
