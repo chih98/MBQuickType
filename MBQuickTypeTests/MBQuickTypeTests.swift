@@ -11,16 +11,25 @@ import UIKit
 @testable import MBQuickType
 
 
-class MBQuickTypeTests: XCTestCase, UIViewController {
+class MBQuickTypeTests: XCTestCase {
     
-    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+    let vc = UIViewController()
     
     let textField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
     
+    var mbQuickType: MBQuickType?
+    
     override func setUp() {
         super.setUp()
-    
-        let app = XCUIApplication()
+        
+        vc.view.addSubview(textField)
+        
+        XCTAssertTrue(vc.view.subviews.count > 0)
+        
+        
+        self.mbQuickType = MBQuickType(withController: vc, inputView: self.textField)
+        
+        XCTAssertTrue(self.mbQuickType != nil)
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -30,16 +39,32 @@ class MBQuickTypeTests: XCTestCase, UIViewController {
         super.tearDown()
     }
     
-    func testSetup() {
+    func testCheckCount() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        self.measure {
+            
+            self.mbQuickType!.addButton(withTitle: "Button 1", target: #selector(self.button(_:)))
+            self.mbQuickType!.addButton(withTitle: "Button 2", target: #selector(self.button(_:)))
+        }
+        
+        XCTAssertTrue(self.mbQuickType!.buttons.count > 0, "Buttons do not equal 2")
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testBarBG() {
+        
+        self.mbQuickType!.barBGColor = UIColor.blue
+        
+        XCTAssertTrue(self.mbQuickType!.barBGColor == UIColor.blue)
+        
+    }
+    
+    @objc func button(_ sender: Any) {
+        
+        
+        
     }
     
 }
