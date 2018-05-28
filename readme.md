@@ -4,7 +4,7 @@
 <img src="./preview.gif" width="246" height="441">
 
 ## Synopsis
-
+[![Build Status](https://travis-ci.org/chih98/MBQuickType.svg?branch=master)](https://travis-ci.org/chih98/MBQuickType)
 
 ## Let's Get Started
 
